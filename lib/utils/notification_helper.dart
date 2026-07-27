@@ -10,7 +10,7 @@ class NotificationHelper {
   static Future<void> initialize() async {
     if (kIsWeb) {
       try {
-        _WebNotificationHelper.requestPermission();
+        WebNotificationHelper.requestPermission();
       } catch (_) {}
     }
   }
@@ -18,7 +18,7 @@ class NotificationHelper {
   static Future<void> requestPermissions() async {
     if (kIsWeb) {
       try {
-        _WebNotificationHelper.requestPermission();
+        WebNotificationHelper.requestPermission();
       } catch (_) {}
     }
   }
@@ -26,7 +26,7 @@ class NotificationHelper {
   static Future<void> scheduleReminder(Habit habit) async {
     if (kIsWeb) {
       try {
-        _WebNotificationHelper.schedule(habit);
+        WebNotificationHelper.schedule(habit);
       } catch (_) {}
     }
   }
@@ -34,7 +34,7 @@ class NotificationHelper {
   static Future<void> cancelReminder(Habit habit) async {
     if (kIsWeb) {
       try {
-        _WebNotificationHelper.cancel(habit);
+        WebNotificationHelper.cancel(habit);
       } catch (_) {}
     }
   }
@@ -42,7 +42,7 @@ class NotificationHelper {
   static Future<void> cancelAll() async {
     if (kIsWeb) {
       try {
-        _WebNotificationHelper.cancelAll();
+        WebNotificationHelper.cancelAll();
       } catch (_) {}
     }
   }

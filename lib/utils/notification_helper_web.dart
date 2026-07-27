@@ -2,7 +2,7 @@ import 'dart:html' as html;
 import '../models/habit.dart';
 
 /// Web implementation using browser Notification API.
-class _WebNotificationHelper {
+class WebNotificationHelper {
   static final Map<String, int> _timers = {};
 
   static void requestPermission() {
