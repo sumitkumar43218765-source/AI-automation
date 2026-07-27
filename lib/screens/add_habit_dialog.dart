@@ -109,7 +109,7 @@ class _AddHabitDialogState extends State<AddHabitDialog> {
                   ElevatedButton.icon(
                     onPressed: _selectTime,
                     icon: const Icon(Icons.access_time),
-                    label: Text(_selectedTime.format()),
+                    label: Text(_selectedTime.format(context)),
                   ),
                 ],
               ),

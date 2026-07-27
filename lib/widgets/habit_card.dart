@@ -91,7 +91,7 @@ class HabitCard extends StatelessWidget {
                       ),
                       const SizedBox(width: 4),
                       Text(
-                        habit.reminderTime.format(),
+                        habit.reminderTime.format(context),
                         style: TextStyle(
                           fontSize: 12,
                           color: Colors.grey[500],
