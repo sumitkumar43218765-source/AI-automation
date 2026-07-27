@@ -7,8 +7,18 @@ workflows:
     scripts:
       - name: Install dependencies
         script: flutter pub get
+      - name: Debug info
+        script: |
+          flutter --version
+          dart --version
+          echo "Flutter path: $(which flutter)"
+          echo "Dart path: $(which dart)"
+          ls -la android/
+          cat android/local.properties 2>/dev/null || echo "No local.properties"
+      - name: Analyze code
+        script: flutter analyze --no-fatal-infos 2>&1 || true
       - name: Build Android APK
-        script: flutter build apk --debug
+        script: flutter build apk --debug 2>&1
     artifacts:
       - build/**/outputs/**/*.apk
 
